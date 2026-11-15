@@ -62,6 +62,11 @@
   .gaps li { position: relative; padding: 12px 0 12px 30px; border-bottom: 1px solid var(--line); }
   .gaps li::before { content: ""; position: absolute; left: 2px; top: 22px; width: 14px; height: 2px; background: var(--spark); }
 
+  .diag { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; }
+  .diag__item { position: relative; padding: 18px 0 18px 46px; border-top: 1px solid var(--line); break-inside: avoid; }
+  .diag__item b { position: absolute; left: 0; top: 20px; font-family: var(--mono); font-weight: 500; font-size: 12.5px; color: var(--spark); }
+  .diag__item h3 { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 22px; line-height: 1.1; color: var(--white); margin-bottom: 5px; }
+  .diag__item p { font-size: 15px; color: var(--muted); }
   .features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .feature { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; break-inside: avoid; }
   .feature h3 { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 23px; line-height: 1.1; letter-spacing: .01em; color: var(--white); margin-bottom: 6px; }
@@ -120,7 +125,7 @@
     body { font-size: 16px; }
     .top__meta { text-align: left; }
     .facts { grid-template-columns: 1fr 1fr; }
-    .gaps, .features, .why, .offer__grid { grid-template-columns: 1fr; }
+    .gaps, .diag, .features, .why, .offer__grid { grid-template-columns: 1fr; }
     thead { display: none; }
     table, tbody, tfoot, tr, td { display: block; width: auto; }
     tr { position: relative; padding: 16px 18px 16px 52px; border-top: 1px solid var(--line); }
@@ -167,20 +172,19 @@
 <div class="page">
 
   <header class="top">
-    <a class="logo" href="https://efl-llc.com" aria-label="EFEL LLC, partner IA">
+    <div class="logo" aria-label="EFEL LLC, partner IA">
       <b>EFEL<i>.</i></b><span>partner IA</span>
-    </a>
+    </div>
     <p class="top__meta">
       EFEL LLC · Delaware, Estados Unidos<br>
-      Servicios web e inteligencia artificial<br>
-      <a href="https://efl-llc.com">efl-llc.com</a>
+      Servicios web e inteligencia artificial
     </p>
   </header>
 
   <div class="cover">
     <p class="tag">Propuesta comercial · Noviembre 2026</p>
     <h1>Propuesta Comercial para <em>PPS S.A.C.</em></h1>
-    <p class="lead">De una página con un titular y cuatro cifras a una <strong>web industrial que presenta la planta, muestra los proyectos y agenda reuniones con ventas</strong>. La nueva web ya está desarrollada. Esta propuesta cubre lo que falta para llevarla a producción con material propio de PPS.</p>
+    <p class="lead">De un sitio que informa pero no vende a una <strong>web industrial que presenta la planta, muestra los proyectos y agenda reuniones con ventas</strong>. La nueva web ya está desarrollada. Esta propuesta cubre lo que falta para llevarla a producción con material propio de PPS.</p>
     <div class="facts">
       <div><b>+6 años</b><span>de experiencia, según su web actual</span></div>
       <div><b>+150</b><span>proyectos</span></div>
@@ -191,18 +195,20 @@
 
   <section id="diagnostico">
     <p class="num">01 · Diagnóstico</p>
-    <h2>El sitio actual no muestra lo que PPS fabrica.</h2>
-    <p class="intro">PPS es una empresa peruana de piping con planta en Punta Negra, Lima, que exporta a Chile y Colombia. Hoy <strong>ppssac.com</strong> se reduce a un titular, cuatro cifras, un enlace de contacto, tres correos y una dirección. Esto es lo que encuentra, y lo que no encuentra, quien evalúa a PPS como proveedor:</p>
-    <ul class="gaps">
-      <li>Sin productos: no dice qué se fabrica.</li>
-      <li>Sin galería: no hay una sola foto de la planta ni del trabajo.</li>
-      <li>Sin sección de servicios.</li>
-      <li>Estructura plana, de una sola página sin recorrido.</li>
-      <li>Un solo titular y cuatro cifras como todo argumento.</li>
-      <li>Un comunicado legal de diciembre de 2019 a la vista.</li>
-      <li>Cifras desactualizadas: 1.4 millones de pulgadas diametrales.</li>
-      <li>Probablemente no se adapta a celulares.</li>
-    </ul>
+    <h2>El sitio actual informa, pero no vende.</h2>
+    <p class="intro">PPS es una empresa peruana de piping con planta en Punta Negra, Lima, que exporta a Chile y Colombia. Revisamos <strong>ppssac.com</strong> página por página el 15 de noviembre de 2026. El sitio tiene siete páginas (Home, Servicios, Infraestructura, Proyectos, Nosotros, Contáctenos y Reclamos) y la información de fondo existe. El problema es cómo se presenta y lo que le falta para convertir una visita en una reunión.</p>
+    <div class="diag">
+      <div class="diag__item"><b>01</b><h3>La portada no dice qué hace PPS</h3><p>Un titular genérico, "Solucion Integral Para El Mundo Del Piping" (sin tilde), cuatro cifras y cuatro enlaces. No hay un botón ni un formulario que invite a contactar: quien llega tiene que buscar el menú.</p></div>
+      <div class="diag__item"><b>02</b><h3>Cifras desactualizadas</h3><p>La portada declara "+6 años" y "1.4 millones" de pulgadas diametrales. El brochure 2026 de PPS habla de 9 años y más de 1.8 millones. Servicios indica pruebas hasta 6,000 PSI y el brochure, hasta 5,000 PSI.</p></div>
+      <div class="diag__item"><b>03</b><h3>Casi invisible para Google</h3><p>Ninguna de las siete páginas tiene descripción para buscadores. Los títulos son una sola palabra ("PPS", "Servicios"), el encabezado principal de la portada está vacío y solo 3 de las 69 imágenes llevan texto alternativo.</p></div>
+      <div class="diag__item"><b>04</b><h3>Sin vista previa al compartir</h3><p>No hay etiquetas para redes ni mensajería. Al enviar el enlace por WhatsApp, correo o LinkedIn no aparece imagen ni resumen de la empresa.</p></div>
+      <div class="diag__item"><b>05</b><h3>Un solo canal de contacto</h3><p>Un formulario genérico en una página aparte. No hay WhatsApp, ni teléfono para llamar con un toque, ni agenda de reuniones, ni un contacto comercial con nombre.</p></div>
+      <div class="diag__item"><b>06</b><h3>Los proyectos son una tabla</h3><p>El mejor argumento de PPS, sus proyectos entre 2015 y 2023, con 588,000 pulgadas diametrales en Talara, se muestra como una tabla de texto en una página interior, sin destacar ninguno.</p></div>
+      <div class="diag__item"><b>07</b><h3>Sin medición</h3><p>No encontramos Google Analytics ni otra herramienta de medición en el código. Hoy no se puede saber cuántas personas visitan el sitio ni de dónde vienen.</p></div>
+      <div class="diag__item"><b>08</b><h3>Solo en español, sin video</h3><p>PPS exporta a Chile y Colombia y atiende a contratistas internacionales, pero el sitio no tiene versión en inglés. Tampoco hay video ni tomas aéreas de una planta de 30,000 m².</p></div>
+      <div class="diag__item"><b>09</b><h3>Un comunicado legal de 2019 en cada página</h3><p>El comunicado de beneficiario final, fechado en diciembre de 2019, aparece completo al pie de todas las páginas y ocupa más texto que la propia portada.</p></div>
+      <div class="diag__item"><b>10</b><h3>La certificación pasa inadvertida</h3><p>ISO 9001 se menciona una sola vez en todo el sitio, cuando es de lo primero que revisa un área de compras.</p></div>
+    </div>
   </section>
 
   <section id="solucion">
@@ -237,19 +243,19 @@
           <tr><th>N.º</th><th>Ítem</th><th>Descripción</th><th class="price">Valor</th></tr>
         </thead>
         <tbody>
-          <tr><td>01</td><td class="item">Vuelo en dron industrial</td><td class="desc">Tomas aéreas sobre la planta.</td><td class="price">USD 500</td></tr>
-          <tr><td>02</td><td class="item">Sesión fotográfica industrial</td><td class="desc">Nueva sesión de fotos en planta.</td><td class="price">USD 500</td></tr>
-          <tr><td>03</td><td class="item">Línea gráfica y rediseño</td><td class="desc">Nueva línea gráfica y rediseño.</td><td class="price">USD 1,500</td></tr>
-          <tr><td>04</td><td class="item">WhatsApp Business API</td><td class="desc">Sistema de comunicación con flujos conversacionales.</td><td class="price">USD 500</td></tr>
-          <tr><td>05</td><td class="item">Migración de DNS</td><td class="desc">Migración completa del dominio ppssac.com al nuevo hosting, con SSL y redirección del sitio viejo.</td><td class="price">USD 300</td></tr>
-          <tr><td>06</td><td class="item">Chatbot en producción</td><td class="desc">Integración del chatbot conversacional al entorno de producción.</td><td class="price">USD 400</td></tr>
-          <tr><td>07</td><td class="item">Contenido nuevo</td><td class="desc">Desarrollo e integración de todo el contenido nuevo, con el material de dron y fotografía.</td><td class="price">USD 1,000</td></tr>
-          <tr><td>08</td><td class="item">Pruebas y lanzamiento</td><td class="desc">Pruebas en móvil, desktop y tablet, más lanzamiento con Analytics y Search Console.</td><td class="price">USD 300</td></tr>
-          <tr><td>09</td><td class="item">Soporte post-lanzamiento</td><td class="desc">Tres meses de soporte.</td><td class="price">USD 600</td></tr>
-          <tr><td>10</td><td class="item">Versión en inglés <span class="addon">Add-on</span></td><td class="desc">Versión en inglés de la web, para clientes de Chile y Colombia.</td><td class="price">USD 1,500</td></tr>
+          <tr><td>01</td><td class="item">Vuelo en dron industrial</td><td class="desc">Tomas aéreas sobre la planta.</td><td class="price">USD 797</td></tr>
+          <tr><td>02</td><td class="item">Sesión fotográfica industrial</td><td class="desc">Nueva sesión de fotos en planta.</td><td class="price">USD 697</td></tr>
+          <tr><td>03</td><td class="item">Línea gráfica y rediseño</td><td class="desc">Nueva línea gráfica y rediseño.</td><td class="price">USD 2,197</td></tr>
+          <tr><td>04</td><td class="item">WhatsApp Business API</td><td class="desc">Sistema de comunicación con flujos conversacionales.</td><td class="price">USD 797</td></tr>
+          <tr><td>05</td><td class="item">Migración de DNS</td><td class="desc">Migración completa del dominio ppssac.com al nuevo hosting, con SSL y redirección del sitio viejo.</td><td class="price">USD 397</td></tr>
+          <tr><td>06</td><td class="item">Chatbot en producción</td><td class="desc">Integración del chatbot conversacional al entorno de producción.</td><td class="price">USD 697</td></tr>
+          <tr><td>07</td><td class="item">Contenido nuevo</td><td class="desc">Desarrollo e integración de todo el contenido nuevo, con el material de dron y fotografía.</td><td class="price">USD 1,497</td></tr>
+          <tr><td>08</td><td class="item">Pruebas y lanzamiento</td><td class="desc">Pruebas en móvil, desktop y tablet, más lanzamiento con Analytics y Search Console.</td><td class="price">USD 497</td></tr>
+          <tr><td>09</td><td class="item">Soporte post-lanzamiento</td><td class="desc">Tres meses de soporte.</td><td class="price">USD 897</td></tr>
+          <tr><td>10</td><td class="item">Versión en inglés <span class="addon">Add-on</span></td><td class="desc">Versión en inglés de la web, para clientes de Chile y Colombia.</td><td class="price">USD 1,797</td></tr>
         </tbody>
         <tfoot>
-          <tr><td></td><td class="item">Suma total</td><td class="desc"></td><td class="price">USD 10,000</td></tr>
+          <tr><td></td><td class="item">Suma total</td><td class="desc"></td><td class="price">USD 10,270</td></tr>
         </tfoot>
       </table>
     </div>
@@ -261,13 +267,14 @@
     <div class="offer">
       <div class="offer__grid">
         <div>
-          <p class="offer__was">Valor del stack: <s>USD 10,000</s></p>
-          <p class="offer__price"><small>USD</small>4,500</p>
+          <p class="offer__was">Valor del stack: <s>USD 10,270</s></p>
+          <p class="offer__price"><small>USD</small>4,497</p>
           <span class="offer__save">Descuento de más del 50 %</span>
         </div>
         <ul class="terms">
           <li><b>Qué incluye</b>Los diez ítems del stack valorizado.</li>
-          <li><b>Precio</b>USD 4,500, en dólares americanos.</li>
+          <li><b>Precio</b>USD 4,497, en dólares americanos.</li>
+          <li><b>Plazo de entrega</b>7 días calendario.</li>
           <li><b>Vigencia</b>Oferta especial de noviembre, con vigencia limitada para cerrar el año.</li>
         </ul>
       </div>
@@ -288,9 +295,8 @@
   <section class="close" id="contacto">
     <p class="num">Siguiente paso</p>
     <h2>Cerremos el año con la web nueva.</h2>
-    <p>La oferta de USD 4,500 es de noviembre y tiene vigencia limitada. Para aceptarla o resolver cualquier duda, escríbanos.</p>
-    <a class="btn" href="https://efl-llc.com">Contactar a EFEL</a>
-    <p class="close__contact"><strong>EFEL LLC</strong> · partner IA<br>Delaware, Estados Unidos · efl-llc.com</p>
+    <p>La oferta de USD 4,497 es de noviembre y tiene vigencia limitada. Entregamos en 7 días calendario.</p>
+    <p class="close__contact"><strong>EFEL LLC</strong> · partner IA<br>Delaware, Estados Unidos</p>
   </section>
 
   <footer>
