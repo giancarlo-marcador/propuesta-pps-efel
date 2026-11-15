@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Propuesta Comercial para PPS S.A.C. · EFEL LLC</title>
+<meta name="description" content="Propuesta comercial de EFEL LLC para la nueva web de PPS S.A.C.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #070b11; --panel: #0e141d; --panel-2: #131b27; --line: rgba(255, 255, 255, .1);
+    --text: #e8edf3; --muted: #9aa7b8; --white: #fff;
+    --spark: #ff7a1a; --blue: #5b9dff; --blue-deep: #1c4fb8;
+    --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+    --body: "IBM Plex Sans", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+    --gutter: clamp(20px, 5vw, 64px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--ink); color: var(--text); font-family: var(--body); font-size: 17px; line-height: 1.6;
+    background-image: radial-gradient(ellipse 80% 50% at 85% -5%, rgba(28, 79, 184, .35), transparent 70%), radial-gradient(ellipse 60% 40% at 0% 30%, rgba(255, 122, 26, .07), transparent 70%);
+    background-repeat: no-repeat;
+  }
+  a { color: inherit; }
+  .page { max-width: 1040px; margin: 0 auto; padding: 0 var(--gutter) 72px; }
+
+  /* Encabezado */
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .logo { display: flex; align-items: baseline; gap: 12px; text-decoration: none; }
+  .logo b { font-family: var(--display); font-weight: 800; font-size: 38px; line-height: 1; letter-spacing: .02em; color: var(--white); }
+  .logo b i { font-style: normal; color: var(--spark); }
+  .logo span { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--blue); }
+  .top__meta { font-family: var(--mono); font-size: 12.5px; line-height: 1.7; color: var(--muted); text-align: right; }
+  .top__meta a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--spark); }
+
+  /* Portada */
+  .cover { padding: clamp(56px, 9vw, 112px) 0 clamp(40px, 6vw, 72px); }
+  .tag { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--spark); }
+  h1 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(52px, 10.5vw, 124px); line-height: .88; letter-spacing: -.01em; color: var(--white); margin: 18px 0 26px; }
+  h1 em { font-style: normal; color: var(--blue); }
+  .lead { font-size: clamp(18px, 2.1vw, 23px); line-height: 1.5; max-width: 34em; color: var(--text); }
+  .lead strong { color: var(--white); font-weight: 600; }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 44px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .facts div { background: var(--panel); padding: 20px 20px 18px; }
+  .facts b { display: block; font-family: var(--display); font-weight: 700; font-size: clamp(30px, 4vw, 44px); line-height: 1; color: var(--white); }
+  .facts span { display: block; margin-top: 8px; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+
+  /* Secciones */
+  section { padding: clamp(44px, 6vw, 76px) 0; border-top: 1px solid var(--line); }
+  .num { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--spark); }
+  h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(36px, 5.6vw, 64px); line-height: .95; color: var(--white); margin: 10px 0 20px; }
+  .intro { max-width: 40em; color: var(--text); margin-bottom: 28px; }
+  .intro strong { color: var(--white); font-weight: 600; }
+
+  .gaps { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+  .gaps li { position: relative; padding: 12px 0 12px 30px; border-bottom: 1px solid var(--line); }
+  .gaps li::before { content: ""; position: absolute; left: 2px; top: 22px; width: 14px; height: 2px; background: var(--spark); }
+
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .feature { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; break-inside: avoid; }
+  .feature h3 { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 23px; line-height: 1.1; letter-spacing: .01em; color: var(--white); margin-bottom: 6px; }
+  .feature p { font-size: 15.5px; color: var(--muted); }
+  .note { margin-top: 22px; padding: 16px 20px; border-left: 3px solid var(--blue); background: rgba(91, 157, 255, .08); border-radius: 0 10px 10px 0; font-size: 15.5px; }
+  .note strong { color: var(--white); }
+  .link { display: inline-block; margin-top: 22px; font-weight: 600; color: var(--white); text-decoration: none; border-bottom: 2px solid var(--spark); padding-bottom: 2px; }
+
+  /* Tabla */
+  .table-wrap { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); }
+  table { width: 100%; border-collapse: collapse; }
+  th { font-family: var(--mono); font-weight: 500; font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 14px 20px; background: var(--panel-2); }
+  td { padding: 15px 20px; border-top: 1px solid var(--line); vertical-align: top; }
+  td:first-child { font-family: var(--mono); font-size: 12.5px; color: var(--blue); width: 52px; padding-right: 0; }
+  td.item { font-weight: 600; color: var(--white); width: 34%; }
+  td.desc { font-size: 15px; color: var(--muted); }
+  th.price, td.price { text-align: right; white-space: nowrap; }
+  td.price { font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1.2; color: var(--white); }
+  .addon { display: inline-block; margin-left: 8px; padding: 2px 8px; border: 1px solid var(--blue); border-radius: 99px; font-family: var(--mono); font-weight: 400; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); vertical-align: middle; }
+  tfoot td { background: var(--panel-2); font-weight: 600; color: var(--white); }
+  tfoot td.price { font-size: 34px; }
+  tr { break-inside: avoid; }
+
+  /* Oferta */
+  .offer { position: relative; overflow: hidden; border-radius: 20px; padding: clamp(28px, 5vw, 56px); background: linear-gradient(135deg, #12213f 0%, #0e141d 55%, #1d1206 100%); border: 1px solid rgba(255, 122, 26, .45); break-inside: avoid; }
+  .offer::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--spark); }
+  .offer__grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(24px, 5vw, 56px); align-items: end; }
+  .offer__was { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+  .offer__was s { color: var(--text); }
+  .offer__price { font-family: var(--display); font-weight: 800; font-size: clamp(84px, 17vw, 190px); line-height: .82; color: var(--white); margin: 12px 0 14px; letter-spacing: -.02em; }
+  .offer__price small { font-size: .26em; font-weight: 700; color: var(--spark); letter-spacing: .04em; margin-right: .2em; }
+  .offer__save { display: inline-block; padding: 7px 14px; border-radius: 99px; background: var(--spark); color: #1a0d02; font-weight: 600; font-size: 14.5px; }
+  .terms { list-style: none; display: grid; gap: 0; }
+  .terms li { padding: 12px 0; border-top: 1px solid var(--line); font-size: 15.5px; }
+  .terms li:first-child { border-top: 0; }
+  .terms b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); margin-bottom: 2px; }
+
+  /* Por qué */
+  .why { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; counter-reset: why; }
+  .why div { counter-increment: why; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px 22px; break-inside: avoid; }
+  .why div::before { content: "0" counter(why); display: block; font-family: var(--display); font-weight: 800; font-size: 44px; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--blue); margin-bottom: 12px; }
+  .why h3 { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: 24px; line-height: 1.1; color: var(--white); margin-bottom: 6px; }
+  .why p { font-size: 15.5px; color: var(--muted); }
+
+  /* Cierre */
+  .close { text-align: center; padding-bottom: clamp(40px, 6vw, 72px); }
+  .close h2 { font-size: clamp(44px, 8vw, 96px); margin-bottom: 18px; }
+  .close p { max-width: 34em; margin: 0 auto 30px; }
+  .btn { display: inline-block; padding: 16px 30px; border-radius: 99px; background: var(--spark); color: #1a0d02; font-weight: 600; font-size: 17px; text-decoration: none; }
+  .close__contact { margin-top: 28px; font-family: var(--mono); font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+  .close__contact strong { color: var(--white); font-weight: 500; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 22px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .top__meta { text-align: left; }
+    .facts { grid-template-columns: 1fr 1fr; }
+    .gaps, .features, .why, .offer__grid { grid-template-columns: 1fr; }
+    thead { display: none; }
+    table, tbody, tfoot, tr, td { display: block; width: auto; }
+    tr { position: relative; padding: 16px 18px 16px 52px; border-top: 1px solid var(--line); }
+    tbody tr:first-child { border-top: 0; }
+    td { padding: 0; border: 0; }
+    td:first-child { position: absolute; left: 18px; top: 19px; width: auto; }
+    td.item { width: auto; padding-right: 0; }
+    td.desc { margin: 4px 0 8px; }
+    td.price, th.price { text-align: left; }
+    tfoot tr { background: var(--panel-2); }
+    tfoot td { background: none; }
+  }
+
+  /* Impresión: documento claro, misma identidad */
+  @page { size: A4; margin: 16mm 15mm; }
+  @media print {
+    :root { --ink: #fff; --panel: #f4f6f9; --panel-2: #e9edf3; --line: #d3dae4; --text: #1b2430; --muted: #4c5a6b; --white: #0a0f17; --blue: #1c4fb8; --spark: #d95f00; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 11pt; }
+    .page { max-width: none; padding: 0; }
+    section { padding: 22pt 0; }
+    .cover { padding: 28pt 0 20pt; }
+    h1 { font-size: 58pt; }
+    h2 { font-size: 30pt; break-after: avoid; }
+    .num { break-after: avoid; }
+    .offer { background: #fff7f0; border-color: var(--spark); }
+    .offer__price { font-size: 96pt; }
+    .offer__save, .btn { color: #fff; }
+    .why div::before { -webkit-text-stroke: 1pt var(--blue); }
+    #stack, #por-que { break-before: page; }
+    #stack, #oferta, #por-que, .close { break-inside: avoid; }
+    thead { display: table-row-group; } tfoot { display: table-row-group; }
+    th { padding: 7pt 12pt; } td { padding: 6.5pt 12pt; }
+    td.price { font-size: 15pt; } tfoot td.price { font-size: 20pt; } td.desc { font-size: 9.5pt; }
+    .feature { padding: 10pt 12pt; } .feature h3 { font-size: 14pt; } .feature p, .why p { font-size: 9.5pt; }
+    .gaps li { padding: 6pt 0 6pt 22pt; } .gaps li::before { top: 13pt; }
+    .facts div { padding: 10pt 12pt; }
+    .close h2 { font-size: 36pt; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="top">
+    <a class="logo" href="https://efl-llc.com" aria-label="EFEL LLC, partner IA">
+      <b>EFEL<i>.</i></b><span>partner IA</span>
+    </a>
+    <p class="top__meta">
+      EFEL LLC · Delaware, Estados Unidos<br>
+      Servicios web e inteligencia artificial<br>
+      <a href="https://efl-llc.com">efl-llc.com</a>
+    </p>
+  </header>
+
+  <div class="cover">
+    <p class="tag">Propuesta comercial · Noviembre 2026</p>
+    <h1>Propuesta Comercial para <em>PPS S.A.C.</em></h1>
+    <p class="lead">De una página con un titular y cuatro cifras a una <strong>web industrial que presenta la planta, muestra los proyectos y agenda reuniones con ventas</strong>. La nueva web ya está desarrollada. Esta propuesta cubre lo que falta para llevarla a producción con material propio de PPS.</p>
+    <div class="facts">
+      <div><b>+6 años</b><span>de experiencia, según su web actual</span></div>
+      <div><b>+150</b><span>proyectos</span></div>
+      <div><b>1.8 M</b><span>pulgadas diametrales en la nueva versión (1.4 M en la web actual)</span></div>
+      <div><b>ISO 9001:2015</b><span>certificación que la nueva versión ya destaca</span></div>
+    </div>
+  </div>
+
+  <section id="diagnostico">
+    <p class="num">01 · Diagnóstico</p>
+    <h2>El sitio actual no muestra lo que PPS fabrica.</h2>
+    <p class="intro">PPS es una empresa peruana de piping con planta en Punta Negra, Lima, que exporta a Chile y Colombia. Hoy <strong>ppssac.com</strong> se reduce a un titular, cuatro cifras, un enlace de contacto, tres correos y una dirección. Esto es lo que encuentra, y lo que no encuentra, quien evalúa a PPS como proveedor:</p>
+    <ul class="gaps">
+      <li>Sin productos: no dice qué se fabrica.</li>
+      <li>Sin galería: no hay una sola foto de la planta ni del trabajo.</li>
+      <li>Sin sección de servicios.</li>
+      <li>Estructura plana, de una sola página sin recorrido.</li>
+      <li>Un solo titular y cuatro cifras como todo argumento.</li>
+      <li>Un comunicado legal de diciembre de 2019 a la vista.</li>
+      <li>Cifras desactualizadas: 1.4 millones de pulgadas diametrales.</li>
+      <li>Probablemente no se adapta a celulares.</li>
+    </ul>
+  </section>
+
+  <section id="solucion">
+    <p class="num">02 · La solución</p>
+    <h2>Una web nueva, ya desarrollada.</h2>
+    <p class="intro">La nueva web de PPS ya existe y funciona. Tiene un <strong>tema oscuro industrial</strong> y un único objetivo: que el visitante agende una reunión con ventas. Esto es lo que incluye hoy:</p>
+    <div class="features">
+      <div class="feature"><h3>Portada cinematográfica</h3><p>Cuatro bandas de texto a pantalla completa que avanzan con el scroll.</p></div>
+      <div class="feature"><h3>Cordón de soldadura</h3><p>Una animación de cordón de soldadura acompaña el avance al hacer scroll.</p></div>
+      <div class="feature"><h3>Menú responsive</h3><p>Menú hamburguesa que se adapta a celulares y tablets.</p></div>
+      <div class="feature"><h3>Proceso en carrusel</h3><p>Las etapas del proceso de fabricación, recorridas una a una.</p></div>
+      <div class="feature"><h3>Capacidad técnica</h3><p>Datos técnicos con un medidor hidrostático interactivo.</p></div>
+      <div class="feature"><h3>Productos con fotos</h3><p>Una cuadrícula que muestra qué fabrica PPS.</p></div>
+      <div class="feature"><h3>Proyectos por sector</h3><p>Un registro de proyectos que se filtra por sector.</p></div>
+      <div class="feature"><h3>La planta</h3><p>Sección dedicada a la planta, con foto aérea.</p></div>
+      <div class="feature"><h3>Preguntas frecuentes</h3><p>Las respuestas que un comprador busca antes de escribir.</p></div>
+      <div class="feature"><h3>Agenda de reuniones</h3><p>Formulario de agenda con tres contactos nombrados.</p></div>
+      <div class="feature"><h3>Chat asistente</h3><p>Asistente flotante conectado a ventas.</p></div>
+      <div class="feature"><h3>Pie de página ordenado</h3><p>El comunicado de beneficiario final queda disponible, pero colapsado.</p></div>
+    </div>
+    <p class="note"><strong>Pendiente para producción:</strong> el archivo robots.txt actual bloquea la indexación en buscadores. Se corrige al publicar en el dominio definitivo.</p>
+    <a class="link" href="https://giancarlo-marcador.github.io/pps-web-cine/">Ver la web nueva en funcionamiento</a>
+  </section>
+
+  <section id="stack">
+    <p class="num">03 · Stack valorizado</p>
+    <h2>Todo lo que incluye, con su valor.</h2>
+    <p class="intro">Precios en dólares americanos.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>N.º</th><th>Ítem</th><th>Descripción</th><th class="price">Valor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>01</td><td class="item">Vuelo en dron industrial</td><td class="desc">Tomas aéreas sobre la planta.</td><td class="price">USD 500</td></tr>
+          <tr><td>02</td><td class="item">Sesión fotográfica industrial</td><td class="desc">Nueva sesión de fotos en planta.</td><td class="price">USD 500</td></tr>
+          <tr><td>03</td><td class="item">Línea gráfica y rediseño</td><td class="desc">Nueva línea gráfica y rediseño.</td><td class="price">USD 1,500</td></tr>
+          <tr><td>04</td><td class="item">WhatsApp Business API</td><td class="desc">Sistema de comunicación con flujos conversacionales.</td><td class="price">USD 500</td></tr>
+          <tr><td>05</td><td class="item">Migración de DNS</td><td class="desc">Migración completa del dominio ppssac.com al nuevo hosting, con SSL y redirección del sitio viejo.</td><td class="price">USD 300</td></tr>
+          <tr><td>06</td><td class="item">Chatbot en producción</td><td class="desc">Integración del chatbot conversacional al entorno de producción.</td><td class="price">USD 400</td></tr>
+          <tr><td>07</td><td class="item">Contenido nuevo</td><td class="desc">Desarrollo e integración de todo el contenido nuevo, con el material de dron y fotografía.</td><td class="price">USD 1,000</td></tr>
+          <tr><td>08</td><td class="item">Pruebas y lanzamiento</td><td class="desc">Pruebas en móvil, desktop y tablet, más lanzamiento con Analytics y Search Console.</td><td class="price">USD 300</td></tr>
+          <tr><td>09</td><td class="item">Soporte post-lanzamiento</td><td class="desc">Tres meses de soporte.</td><td class="price">USD 600</td></tr>
+          <tr><td>10</td><td class="item">Versión en inglés <span class="addon">Add-on</span></td><td class="desc">Versión en inglés de la web, para clientes de Chile y Colombia.</td><td class="price">USD 1,500</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td></td><td class="item">Suma total</td><td class="desc"></td><td class="price">USD 10,000</td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section id="oferta">
+    <p class="num">04 · Oferta de noviembre</p>
+    <h2>El stack completo, a menos de la mitad.</h2>
+    <div class="offer">
+      <div class="offer__grid">
+        <div>
+          <p class="offer__was">Valor del stack: <s>USD 10,000</s></p>
+          <p class="offer__price"><small>USD</small>4,500</p>
+          <span class="offer__save">Descuento de más del 50 %</span>
+        </div>
+        <ul class="terms">
+          <li><b>Qué incluye</b>Los diez ítems del stack valorizado.</li>
+          <li><b>Precio</b>USD 4,500, en dólares americanos.</li>
+          <li><b>Vigencia</b>Oferta especial de noviembre, con vigencia limitada para cerrar el año.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que">
+    <p class="num">05 · Por qué EFEL</p>
+    <h2>Un partner, no un proveedor más.</h2>
+    <div class="why">
+      <div><h3>Empresa americana</h3><p>EFEL LLC está constituida en Delaware, Estados Unidos.</p></div>
+      <div><h3>Enfoque partner IA</h3><p>Servicios web e inteligencia artificial en un mismo equipo: el chat asistente y los flujos de WhatsApp forman parte de la web, no son un añadido.</p></div>
+      <div><h3>Webs industriales</h3><p>Experiencia en sitios para empresas industriales.</p></div>
+      <div><h3>La web ya está hecha</h3><p>PPS no compra una promesa. La nueva web ya está desarrollada y se puede revisar hoy.</p></div>
+    </div>
+  </section>
+
+  <section class="close" id="contacto">
+    <p class="num">Siguiente paso</p>
+    <h2>Cerremos el año con la web nueva.</h2>
+    <p>La oferta de USD 4,500 es de noviembre y tiene vigencia limitada. Para aceptarla o resolver cualquier duda, escríbanos.</p>
+    <a class="btn" href="https://efl-llc.com">Contactar a EFEL</a>
+    <p class="close__contact"><strong>EFEL LLC</strong> · partner IA<br>Delaware, Estados Unidos · efl-llc.com</p>
+  </section>
+
+  <footer>
+    <span>EFEL LLC · Constituida en Delaware, Estados Unidos</span>
+    <span>Propuesta para PPS S.A.C. · Noviembre 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
